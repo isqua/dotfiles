@@ -1,0 +1,12 @@
+[user]
+	email = isqua@isqua.ru
+	name = isqua
+[push]
+	default = simple
+[core]
+	editor = vim
+	pager = less
+[color]
+	ui = true
+[alias]
+	co = checkout
