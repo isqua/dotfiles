@@ -4,11 +4,9 @@ prompt_bureau_setup () {
     prompt_bureau_vcs_color=${3:-$prompt_bureau_user_color}
 
     autoload -Uz vcs_info
-    autoload -U colors && colors
     prompt_bureau_vcs_style
     add-zsh-hook precmd prompt_bureau_precmd
 
-    setopt prompt_subst
     PROMPT=$(prompt_bureau_prompt)
 }
 
@@ -24,7 +22,6 @@ prompt_bureau_string_width () {
 }
 
 prompt_bureau_precmd () {
-    vcs_info
     prompt_bureau_update_vcs
 
     # user@host path
@@ -37,18 +34,19 @@ prompt_bureau_precmd () {
 }
 
 prompt_bureau_vcs_style () {
-    setopt prompt_subst
     zstyle ':vcs_info:*' enable git
     # Check for staged and unstaged
     zstyle ':vcs_info:*' check-for-changes true
     zstyle ':vcs_info:*' max-exports 2
+    local git_base="%{$fg[green]%}±%{$fg_bold[$prompt_bureau_vcs_color]%}%b %u%c%"
     zstyle ':vcs_info:git*' stagedstr "%{$fg_bold[green]%}●"
     zstyle ':vcs_info:git*' unstagedstr "%{$fg_bold[red]%}●"
-    zstyle ':vcs_info:git*' formats "[%{$fg[green]%}±%{$fg_bold[white]%}%b %u%c%{$reset_color%}]"
-    zstyle ':vcs_info:git*' actionformats "[%{$fg[green]%}±%{$fg_bold[white]%}%b %u%c %{$fg[magenta]%}⌘ %a%{$reset_color%}]"
+    zstyle ':vcs_info:git*' formats "[${git_base}%{$reset_color%}]"
+    zstyle ':vcs_info:git*' actionformats "[${git_base} %{$fg[magenta]%}⌘ %a%{$reset_color%}]"
 }
 
 prompt_bureau_update_vcs () {
+    vcs_info
     RPROMPT="$vcs_info_msg_0_"
 }
 
