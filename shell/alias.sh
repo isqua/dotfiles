@@ -23,6 +23,8 @@ alias gf='git fetch'
 alias gc='git commit -v'
 alias gca='git commit -v --amend'
 
+alias gcv='git cherry -v'
+
 alias gcp='git cherry-pick'
 alias gcpa='git cherry-pick --abort'
 alias gcpc='git cherry-pick --continue'
