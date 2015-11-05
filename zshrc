@@ -42,8 +42,8 @@ setopt CORRECT_ALL
 bindkey -e
 zmodload zsh/terminfo
 # Туда-сюда по истории
-if [[ -n "${terminfo[kcuu1]}" ]]; then bindkey "${terminfo[kcuu1]}" up-line-or-search; fi
-if [[ -n "${terminfo[kcud1]}" ]]; then bindkey "${terminfo[kcud1]}" down-line-or-search; fi
+if [[ -n "${terminfo[kcuu1]}" ]]; then bindkey "${terminfo[kcuu1]}" history-beginning-search-backward; fi
+if [[ -n "${terminfo[kcud1]}" ]]; then bindkey "${terminfo[kcud1]}" history-beginning-search-forward; fi
 # Delete
 if [[ -n "${terminfo[kdch1]}" ]]; then bindkey "${terminfo[kdch1]}" delete-char; fi
 
