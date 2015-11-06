@@ -27,6 +27,8 @@ alias gf='git fetch'
 
 alias gc='git commit -v'
 alias gca='git commit -v --amend'
+alias gfx='git commit -v --fixup'
+alias gtemp='git commit -v --no-verify -m temp'
 
 alias gcv='git cherry -v'
 
