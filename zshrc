@@ -5,17 +5,17 @@ autoload -U compinit && compinit
 autoload -U promptinit && promptinit
 
 # History
-HISTSIZE=5000
-SAVEHIST=5000
-HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.zsh_history
 
-setopt append_history
-setopt extended_history
-setopt share_history # share command history data
-setopt inc_append_history # save on exec, not on logout
-setopt hist_ignore_all_dups
-setopt hist_ignore_space
-setopt hist_reduce_blanks
+setopt APPEND_HISTORY # don’t replace history, just append
+setopt EXTENDED_HISTORY # save time and duration
+#setopt SHARE_HISTORY # share history between sessions
+setopt HIST_IGNORE_ALL_DUPS # remove old dup
+setopt HIST_IGNORE_SPACE # don’t save commands start with space
+setopt HIST_REDUCE_BLANKS # Remove superfluous blanks from each command line
+setopt INC_APPEND_HISTORY # save on exec, not on logout
 
 source $HOME/.dotfiles/shell/export.sh
 source $HOME/.dotfiles/shell/alias.sh
@@ -42,8 +42,8 @@ setopt CORRECT_ALL
 bindkey -e
 zmodload zsh/terminfo
 # Туда-сюда по истории
-if [[ -n "${terminfo[kcuu1]}" ]]; then bindkey "${terminfo[kcuu1]}" history-beginning-search-backward; fi
-if [[ -n "${terminfo[kcud1]}" ]]; then bindkey "${terminfo[kcud1]}" history-beginning-search-forward; fi
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
 # Delete
 if [[ -n "${terminfo[kdch1]}" ]]; then bindkey "${terminfo[kdch1]}" delete-char; fi
 
