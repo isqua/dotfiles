@@ -19,7 +19,7 @@ setopt INC_APPEND_HISTORY # save on exec, not on logout
 
 source $HOME/.dotfiles/shell/export.sh
 source $HOME/.dotfiles/shell/alias.sh
-source $HOME/.dotfiles/shell/prompt_bureau_setup.sh
+source $HOME/.dotfiles/shell/bureau/prompt_bureau_setup.zsh
 
 alias mv='nocorrect mv -i'
 alias cp='nocorrect cp -iR'

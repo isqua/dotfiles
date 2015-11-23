@@ -1,0 +1,3 @@
+[submodule "shell/bureau"]
+	path = shell/bureau
+	url = git://github.com/isqua/bureau.git
