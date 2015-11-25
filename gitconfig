@@ -2,7 +2,7 @@
 	email = isqua@isqua.ru
 	name = isqua
 [push]
-	default = simple
+	default = current
 [core]
 	editor = vim
 	pager = less
@@ -10,3 +10,7 @@
 	ui = true
 [alias]
 	co = checkout
+	empty = commit --allow-empty -m
+	temp = commit --no-verify -v -m
+	fix = commit --fixup
+	squash = rebase --autosquash -i
