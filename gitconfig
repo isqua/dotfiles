@@ -14,3 +14,4 @@
 	temp = commit --no-verify -v -m
 	fix = commit --fixup
 	squash = rebase --autosquash -i
+	diffs = diff --staged
