@@ -39,6 +39,9 @@ zstyle ':completion:*:*:kill:*:processes' list-colors "=(#b) #([0-9]#)*=$color[b
 # Исправлять команды
 setopt CORRECT_ALL
 
+# Какие символы не считать в составе слов при ^W и подобном
+export WORDCHARS=${WORDCHARS//[?=\/&;^.]}
+
 bindkey -e
 zmodload zsh/terminfo
 # Туда-сюда по истории
@@ -50,3 +53,5 @@ if [[ -n "${terminfo[kdch1]}" ]]; then bindkey "${terminfo[kdch1]}" delete-char;
 # Вправо-влево по словам по нажатию Alt+стрелки
 bindkey '^[^[[C' emacs-forward-word
 bindkey '^[^[[D' emacs-backward-word
+
+alias pointbuild='sudo docker build --tag=private/point point'
