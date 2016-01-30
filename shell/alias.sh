@@ -43,6 +43,9 @@ alias gd='git diff'
 alias gdca='git diff --cached'
 
 ###############################################################################
+# utils
+
+alias servehttp='python -m SimpleHTTPServer'
 compress () {
     if [ $1 ] ; then
         case $1 in
