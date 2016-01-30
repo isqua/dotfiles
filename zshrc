@@ -40,7 +40,7 @@ zstyle ':completion:*:*:kill:*:processes' list-colors "=(#b) #([0-9]#)*=$color[b
 setopt CORRECT_ALL
 
 # Какие символы не считать в составе слов при ^W и подобном
-export WORDCHARS=${WORDCHARS//[?=\/&;^.]}
+WORDCHARS=${WORDCHARS//[?=\/&;^.]}
 
 bindkey -e
 zmodload zsh/terminfo
