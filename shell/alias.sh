@@ -16,6 +16,8 @@ alias du='du -h'
 alias less='less -M'
 alias wget='wget -c'
 
+alias sshfingerprint='ssh-keygen -l -E md5 -f'
+
 ###############################################################################
 # git
 alias gst='git status'
