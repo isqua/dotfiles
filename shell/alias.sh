@@ -46,9 +46,21 @@ alias gd='git diff'
 alias gdca='git diff --cached'
 
 ###############################################################################
+# virtualbox
+
+virtstart () {
+    VBoxManage startvm $1 --type headless
+}
+
+virtstop () {
+    VBoxManage controlvm $1 poweroff
+}
+
+###############################################################################
 # utils
 
 alias servehttp='python -m SimpleHTTPServer'
+
 compress () {
     if [ $1 ] ; then
         case $1 in
