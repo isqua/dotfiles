@@ -46,7 +46,7 @@ fi
 
 source $HOME/.dotfiles/shell/export.sh
 source $HOME/.dotfiles/shell/alias.sh
-source $HOME/.dotfiles/shell/prompt_b.sh
+source $HOME/.dotfiles/shell/bash_prompt.sh
 
 if command -v tmux; then
     tmux -CC new -A -s 0
