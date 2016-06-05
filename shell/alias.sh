@@ -19,6 +19,8 @@ alias wget='wget -c'
 alias sshfingerprint='ssh-keygen -l -E md5 -f'
 alias sshpasswd='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'
 
+alias trimleft="sed 's/^[ \t]*//'"
+
 ###############################################################################
 # git
 alias gst='git status'
