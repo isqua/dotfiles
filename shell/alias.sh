@@ -62,6 +62,7 @@ virtstop () {
 # utils
 
 alias servehttp='python -m SimpleHTTPServer'
+alias wttr='curl wttr.in/saint-petersburg'
 
 compress () {
     if [ $1 ] ; then
