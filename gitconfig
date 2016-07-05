@@ -16,3 +16,4 @@
 	squash = rebase --autosquash -i
 	diffs = diff --staged
 	orphan = checkout --orphan
+	cv = cherry -v
