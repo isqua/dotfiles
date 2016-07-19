@@ -16,6 +16,7 @@ setopt HIST_IGNORE_ALL_DUPS # remove old dup
 setopt HIST_IGNORE_SPACE # don’t save commands start with space
 setopt HIST_REDUCE_BLANKS # Remove superfluous blanks from each command line
 setopt INC_APPEND_HISTORY # save on exec, not on logout
+setopt CORRECT_ALL # Correct commands
 
 source $HOME/.dotfiles/shell/export.sh
 source $HOME/.dotfiles/shell/alias.sh
@@ -36,9 +37,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # Комплишн для kill
 zstyle ':completion:*:*:kill:*:processes' list-colors "=(#b) #([0-9]#)*=$color[blue]=$color[yellow]"
 
-# Исправлять команды
-setopt CORRECT_ALL
-
 # Какие символы не считать в составе слов при ^W и подобном
 WORDCHARS=${WORDCHARS//[?=\/&;^.]}
 
@@ -53,5 +51,3 @@ if [[ -n "${terminfo[kdch1]}" ]]; then bindkey "${terminfo[kdch1]}" delete-char;
 # Вправо-влево по словам по нажатию Alt+стрелки
 bindkey '^[^[[C' emacs-forward-word
 bindkey '^[^[[D' emacs-backward-word
-
-alias pointbuild='sudo docker build --tag=private/point point'
