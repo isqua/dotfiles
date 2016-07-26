@@ -18,3 +18,4 @@
 	orphan = checkout --orphan
 	cv = cherry -v
 	cp = cherry-pick
+	cm = commit -m
