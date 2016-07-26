@@ -17,3 +17,4 @@
 	diffs = diff --staged
 	orphan = checkout --orphan
 	cv = cherry -v
+	cp = cherry-pick
