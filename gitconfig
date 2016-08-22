@@ -9,13 +9,20 @@
 [color]
 	ui = true
 [alias]
+	diffs = diff --staged
 	co = checkout
+	orphan = checkout --orphan
+	cm = commit -m
+	ca = commit --amend
+	ca = commit --amend -m
 	empty = commit --allow-empty -m
 	temp = commit --no-verify -v -m
 	fix = commit --fixup
+	rb = rebase
+	rbc = rebase --continue
+	rba = rebase --abort
 	squash = rebase --autosquash -i
-	diffs = diff --staged
-	orphan = checkout --orphan
 	cv = cherry -v
 	cp = cherry-pick
-	cm = commit -m
+	cpc = cherry-pick --continue
+	cpa = cherry-pick --abort
