@@ -26,3 +26,6 @@
 	cp = cherry-pick
 	cpc = cherry-pick --continue
 	cpa = cherry-pick --abort
+[diff]
+	# (i)ndex, (w)ork tree, (c)ommit and (o)bject
+	mnemonicprefix = true
