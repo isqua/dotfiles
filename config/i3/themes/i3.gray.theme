@@ -1,0 +1,16 @@
+bar {
+  colors {
+    separator #111111
+    background #111111
+    statusline #999999
+    focused_workspace #c4c4c4 #c4c4c4 #333333
+    active_workspace #656473 #656473 #dddddd
+    inactive_workspace #111111 #111111 #999999
+    urgent_workspace #ffbd2e #ffbd2e #999999
+  }
+}
+
+client.focused #c4c4c4 #c4c4c4 #333333 #0069d8
+client.unfocused #000000 #00000000 #999999 #0069d8
+client.focused_inactive #656473 #656473 #dddddd #0069d8
+client.urgent #ffbd2e #ffbd2e #999999 #0069d8
