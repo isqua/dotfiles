@@ -63,6 +63,11 @@ virtstop () {
 
 alias servehttp='python -m SimpleHTTPServer'
 alias wttr='curl wttr.in/saint-petersburg'
+alias ipexternal='curl ident.me'
+
+retinafy () {
+    convert $1 -filter point -resize 200% $2
+}
 
 compress () {
     if [ $1 ] ; then
