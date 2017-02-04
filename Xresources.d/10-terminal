@@ -1,0 +1,30 @@
+URxvt.scrollBar_right: true
+URxvt.font: xft:Ubuntu Mono:pixelsize=14,style=regular
+
+! https://github.com/sapegin/squirrelsong
+URxvt.background: #2F251D
+URxvt.foreground: #97846F
+! black
+URxvt.color0 : #111179794242
+URxvt.color8 : #D1D18B8B4646
+! red
+URxvt.color1 : #B9B947473636
+URxvt.color9 : #E0E045453737
+! green
+URxvt.color2 : #37378A8A2C2C
+URxvt.color10: #3636A8A82222
+! yellow
+URxvt.color3 : #A3A375751515
+URxvt.color11: #C9C988881818
+! blue
+URxvt.color4 : #4D4D7E7ED3D3
+URxvt.color12: #4D4D8282FFFF
+! magenta
+URxvt.color5 : #D3D35656B6B6
+URxvt.color13: #FFFF4A4AD8D8
+! cyan
+URxvt.color6 : #313195959C9C
+URxvt.color14: #3A3AB9B9C2C2
+! white
+URxvt.color7 : #C4C4A4A48A8A
+URxvt.color15: #F3F3EBEBD4D4
