@@ -47,6 +47,7 @@ fi
 source $HOME/.dotfiles/shell/export.sh
 source $HOME/.dotfiles/shell/alias.sh
 source $HOME/.dotfiles/shell/bash_prompt.sh
+source $HOME/.dotfiles/shell/ssh-auth-sock.sh
 
 if command -v tmux; then
     tmux -CC new -A -s 0
