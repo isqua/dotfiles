@@ -49,6 +49,6 @@ source $HOME/.dotfiles/shell/alias.sh
 source $HOME/.dotfiles/shell/bash_prompt.sh
 source $HOME/.dotfiles/shell/ssh-auth-sock.sh
 
-if command -v tmux; then
+if command -v tmux && [ $TERM != "screen" ]; then
     tmux -CC new -A -s 0
 fi
