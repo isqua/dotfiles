@@ -22,6 +22,10 @@ alias sshpasswd='ssh -o PreferredAuthentications=password -o PubkeyAuthenticatio
 
 alias trimleft="sed 's/^[ \t]*//'"
 
+function title() {
+    echo -ne "\033]0;$1\007"
+}
+
 ###############################################################################
 # git
 alias gst='git status'
@@ -107,3 +111,20 @@ extract () {
         echo "'$1' is not a valid file"
     fi
 }
+
+###############################################################################
+# nginx logs
+
+alias nglog='tail -f /var/log/nginx/access.log'
+alias ngerr='tail -f /var/log/nginx/error.log'
+
+###############################################################################
+# wmc logs
+
+wclog() {
+    tail -f /var/log/node-init-cluster/"$(basename $PWD)-$(whoami)"/debug.log
+}
+
+wcerr() {
+    tail -f /var/log/node-init-cluster/"$(basename $PWD)-$(whoami)"/error.log
+} 
