@@ -1,3 +1,4 @@
+alias e=$EDITOR
 # enable color support of ls and also add handy aliases
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
