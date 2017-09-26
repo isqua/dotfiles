@@ -44,6 +44,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
+source $HOME/.dotfiles/shell/detect_os.sh
 source $HOME/.dotfiles/shell/export.sh
 source $HOME/.dotfiles/shell/alias.sh
 source $HOME/.dotfiles/shell/bash_prompt.sh

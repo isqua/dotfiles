@@ -18,6 +18,7 @@ setopt HIST_REDUCE_BLANKS # Remove superfluous blanks from each command line
 setopt INC_APPEND_HISTORY # save on exec, not on logout
 setopt CORRECT_ALL # Correct commands
 
+source $HOME/.dotfiles/shell/detect_os.sh
 source $HOME/.dotfiles/shell/export.sh
 source $HOME/.dotfiles/shell/alias.sh
 source $HOME/.dotfiles/shell/bureau/prompt_bureau_setup.zsh

@@ -1,4 +1,11 @@
 alias e=$EDITOR
+
+if [[ $machine == "Linux" ]]; then
+    alias o='xdg-open'
+elif [[ $machine == "Mac" ]]; then
+    alias o='open'
+fi
+
 # enable color support of ls and also add handy aliases
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
