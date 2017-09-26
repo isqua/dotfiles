@@ -15,7 +15,8 @@ alias egrep='egrep --color=auto'
 # System
 alias fuck='sudo !!'
 alias ls='ls $LS_OPTIONS'
-alias ll='ls -alF'
+alias ll='ls -alhF'
+alias l1='ls -1'
 alias la='ls -A'
 alias l='ls -CF'
 
