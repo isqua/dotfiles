@@ -1,6 +1,10 @@
-git_prompt_file=/usr/lib/git-core/git-sh-prompt
+if [ -f /usr/lib/git-core/git-sh-prompt ]; then
+    git_prompt_file=/usr/lib/git-core/git-sh-prompt
+elif [ -f /usr/local/git/contrib/completion/git-prompt.sh ]; then
+    git_prompt_file=/usr/local/git/contrib/completion/git-prompt.sh
+fi
 
-if [ -f $git_prompt_file ]; then
+if [ -n "$git_prompt_file" ]; then
 
     source $git_prompt_file
 
