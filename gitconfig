@@ -27,6 +27,8 @@
 	cpc = cherry-pick --continue
 	cpa = cherry-pick --abort
 	please = push --force-with-lease
+	cdch = commit -m 'changelog updated' debian/changelog
+	cdchs = commit -m 'support changelog updated' support/debian/changelog
 [diff]
 	# (i)ndex, (w)ork tree, (c)ommit and (o)bject
 	mnemonicprefix = true
