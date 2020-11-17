@@ -1,0 +1,16 @@
+[branch "trunk"]
+    allowCommit = false
+
+[alias]
+    co = checkout
+    diffs = diff --staged
+    cm = commit -m
+    ca = commit --amend
+    fix = commit --fixup
+    rb = rebase
+    rbc = rebase --continue
+    rba = rebase --abort
+    squash = rebase --autosquash -i
+    cp = cherry-pick
+    cpc = cherry-pick --continue
+    cpa = cherry-pick --abort
