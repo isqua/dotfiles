@@ -21,7 +21,7 @@ setopt CORRECT_ALL # Correct commands
 source $HOME/.dotfiles/shell/detect_os.sh
 source $HOME/.dotfiles/shell/export.sh
 source $HOME/.dotfiles/shell/alias.sh
-source $HOME/.dotfiles/shell/bureau/prompt_bureau_setup.zsh
+source $HOME/.dotfiles/shell/bureau/prompt_bureau_setup.zsh magenta
 
 alias mv='nocorrect mv -i'
 alias cp='nocorrect cp -iR'
