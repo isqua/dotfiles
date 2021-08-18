@@ -47,6 +47,7 @@ fi
 source $HOME/.dotfiles/shell/detect_os.sh
 source $HOME/.dotfiles/shell/export.sh
 source $HOME/.dotfiles/shell/alias.sh
+source $HOME/.dotfiles/shell/nvm.sh
 source $HOME/.dotfiles/shell/bash_prompt.sh
 source $HOME/.dotfiles/shell/ssh-auth-sock.sh
 
