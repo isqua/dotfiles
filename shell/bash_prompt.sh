@@ -12,22 +12,22 @@ if [ -n "$git_prompt_file" ]; then
     GIT_PS1_SHOWUNTRACKEDFILES=y
     GIT_PS1_SHOWCOLORHINTS=y
 
-    PROMPT_COMMAND='__git_ps1 "\n\e[1;37m\u\e[0m@\H \e[1;37m\w\e[0m " "\n> \$ "'
+    PROMPT_COMMAND='__git_ps1 "\n\e[1;35m\u\e[0m@\H \e[1;35m\w\e[0m " "\n> \$ "'
 
 else
 
     Color_Off='\e[0m'       # Text Reset
 
     # Bold
-    BWhite='\e[1;37m'       # White
+    BMagenta='\e[1;35m'       # Magenta
 
     _prompt_user() {
-        echo "${BWhite}\u${Color_Off}@\H"
+        echo "${BMagenta}\u${Color_Off}@\H"
     }
 
     # returns current path for prompt (home is ~)
     _prompt_path() {
-        echo "${BWhite}\w${Color_Off}"
+        echo "${BMagenta}\w${Color_Off}"
     }
 
     PS1="\n"
