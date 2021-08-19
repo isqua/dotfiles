@@ -121,6 +121,27 @@ extract () {
 }
 
 ###############################################################################
+# npm
+
+# link npm package without npm install
+npml () {
+    node_modules_path="$(npm prefix -g)/lib/node_modules"
+    package_name=$(npm run env | grep "npm_package_name" | cut -d "=" -f 2)
+
+    echo "npm link ${package_name} with no install to ${node_modules_path}..."
+
+    scope=$(dirname ${package_name})
+
+    if [ -n "${scope}" ]; then
+        mkdir -p ${node_modules_path}/${scope}
+    fi
+
+    ln -sfn $PWD ${node_modules_path}/${package_name}
+
+    echo "Successfully linked ${package_name} to ${node_modules_path}/${package_name}"
+}
+
+###############################################################################
 # nginx logs
 
 alias nglog='tail -f /var/log/nginx/access.log'
