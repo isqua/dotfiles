@@ -4,6 +4,14 @@ case $- in
       *) return;;
 esac
 
+not_inside_program() {
+  [ "$TERM" != "screen" ] && [ "$TERM_PROGRAM" != "vscode" ]
+}
+
+if not_inside_program && command -v tmux &> /dev/null; then
+  tmux -CC new -A -s 0
+fi
+
 # Ввод имени директории без cd bash@4.0
 # shopt -s autocd
 
@@ -50,7 +58,3 @@ source $HOME/.dotfiles/shell/alias.sh
 source $HOME/.dotfiles/shell/nvm.sh
 source $HOME/.dotfiles/shell/bash_prompt.sh
 source $HOME/.dotfiles/shell/ssh-auth-sock.sh
-
-if command -v tmux && [ $TERM != "screen" ]; then
-    tmux -CC new -A -s 0
-fi
