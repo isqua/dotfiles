@@ -78,10 +78,6 @@ alias servehttp='python -m SimpleHTTPServer'
 alias wttr='curl wttr.in/saint-petersburg'
 alias ipexternal='curl ident.me'
 
-retinafy () {
-    convert $1 -filter point -resize 200% $2
-}
-
 compress () {
     if [ $1 ] ; then
         case $1 in
@@ -146,3 +142,21 @@ npml () {
 
 alias nglog='tail -f /var/log/nginx/access.log'
 alias ngerr='tail -f /var/log/nginx/error.log'
+
+###############################################################################
+# media
+
+retinafy () {
+    convert $1 -filter point -resize 200% $2
+}
+
+mov2mp4 () {
+    input=$1
+    file_without_extension="${input%.*}"
+    output="${file_without_extension}.mp4"
+    ffmpeg -i ${input} -q:v 0 ${output}
+
+    echo ""
+    echo "Successfully converted:"
+    file ${output}
+}
