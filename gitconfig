@@ -6,6 +6,7 @@
 [core]
 	editor = vim
 	pager = less
+	excludesFile = ~/.gitignore
 [color]
 	ui = true
 [alias]
