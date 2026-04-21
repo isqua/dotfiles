@@ -1,5 +1,5 @@
 [user]
-	email = isqua@isqua.ru
+	email = isqua@users.noreply.github.com
 	name = isqua
 [push]
 	default = current
@@ -33,3 +33,5 @@
 [diff]
 	# (i)ndex, (w)ork tree, (c)ommit and (o)bject
 	mnemonicprefix = true
+[init]
+	defaultBranch = main
